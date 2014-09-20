@@ -8,12 +8,14 @@ A VM to run Meteor apps (with different versions of Meteor!) on any OS without i
 > see: https://github.com/pedantic-git/vagrant-meteor-repro
 
 
-Boot MongoDB using: ```
+Boot MongoDB using:
+
+```sh
 mongod --dbpath /home/vagrant/local/db --setParameter textSearchEnabled=true
 ```
 
 Error:
-```
+```sh
 Unexpected mongo exit code 100. Restarting.
 Can't start Mongo server.
 MongoDB had an unspecified uncaught exception.
@@ -25,10 +27,12 @@ Looked at: http://stackoverflow.com/questions/21272446/error-with-mongo-starting
 
 
 Error:
-```
+```sh
 FATAL ERROR: Evacuation Allocation failed - process out of memory
 Killed
 ```
+
+Apparently Vagrant does not play well with Meteor... :-(
 
 
 https://github.com/meteor/meteor/issues/1337#issuecomment-47439995
